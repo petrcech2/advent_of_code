@@ -10,7 +10,6 @@ def counter(mapping,seeds):
             range_len = int(item[2])
             for seed_position, seed in enumerate(seeds):
                 if int(source_num) <= int(seed) < int(source_num)+range_len and flag_list[seed_position] != 'CH':
-                    print(f"Seed je: {seed}, source_num je {source_num} a destination_num je {destination_num}")
                     seeds[seed_position] = int(seed) - int(source_num) + int(destination_num)
                     flag_list[seed_position] = 'CH' 
         print(f"Seeds = {seeds}")
