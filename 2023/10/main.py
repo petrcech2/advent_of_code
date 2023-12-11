@@ -4,20 +4,16 @@ def navigation(starting_location,map_translation):
         if piece[0] == starting_location:
             actual_locations.append([piece[1],piece[2]])
     distance = 1
-    #print(actual_locations)
     while True:
-        al_hlidac = [0,0]
+        al_watch = [0,0]
         for piece in map_translation:
             for i,actual_location in enumerate(actual_locations):
-                if actual_location[0] == piece[0] and actual_location[1] == piece[1] and al_hlidac[i] == 0:
-                    print(f'Actual location {i} was changed from {actual_location} to {[piece[1],piece[2]]} a hlidac je {al_hlidac}')
+                if actual_location[0] == piece[0] and actual_location[1] == piece[1] and al_watch[i] == 0:
                     actual_locations[i] = [piece[1],piece[2]]
-                    al_hlidac[i] = 1
+                    al_watch[i] = 1
                     distance += 1
                     break
-        print(f'actual location: {actual_locations}')
-        flag += 1
-        if actual_locations[0][1] == actual_locations[1][1]: # or flag > 20:
+        if actual_locations[0][1] == actual_locations[1][1]:
             print((distance+3)/2)
             break
 
