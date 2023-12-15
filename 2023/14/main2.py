@@ -1,3 +1,5 @@
+#can be done if i have enough time, just make a new mapping after stone_moving and turn locations by 90°
+
 import re
 
 def stone_moving(input):
